@@ -1,4 +1,6 @@
 # idporten-authlevel-example
-Enkelt eksempel på integrasjon mot Id-porten sitt authlevel-api
+Enkelt eksempel på integrasjon mot Id-porten sitt authlevel-api.
 
-Eksempelet er implmentert som en junit-test, se no.idporten.authlevel.AuthlevelApiTest
+Eksempelet er implementert som ein junit-test, sjå **no.idporten.authlevel.AuthlevelApiTest**
+
+Testen køyrer mot Id-porten sitt yt2-miljø.

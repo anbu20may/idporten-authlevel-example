@@ -35,9 +35,9 @@ import static org.junit.Assert.*;
 public class AuthlevelApiTest {
 
     private static final String ISSUER = "test_authlevel";
-    private static final String AUDIENCE = "https://oidc-test1.difi.eon.no/idporten-oidc-provider/";
-    private static final String TOKEN_ENDPOINT = "https://oidc-test1.difi.eon.no/idporten-oidc-provider/token";
-    private static final String API_ENDPOINT = "https://kontaktinfo-ws-test1.difi.eon.no/authlevel/rest/v1/sikkerhetsnivaa";
+    private static final String AUDIENCE = "https://oidc-yt2.difi.eon.no/idporten-oidc-provider/";
+    private static final String TOKEN_ENDPOINT = "https://oidc-yt2.difi.eon.no/idporten-oidc-provider/token";
+    private static final String API_ENDPOINT = "https://kontaktinfo-ws-yt2.difi.eon.no/authlevel/rest/v1/sikkerhetsnivaa";
     private static final String SCOPE = "global/idporten.authlevel.read";
 
 
