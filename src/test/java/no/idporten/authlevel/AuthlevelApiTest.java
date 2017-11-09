@@ -35,9 +35,9 @@ import static org.junit.Assert.*;
 public class AuthlevelApiTest {
 
     private static final String ISSUER = "test_authlevel";
-    private static final String AUDIENCE = "https://oidc-yt2.difi.eon.no/idporten-oidc-provider/";
-    private static final String TOKEN_ENDPOINT = "https://oidc-yt2.difi.eon.no/idporten-oidc-provider/token";
-    private static final String API_ENDPOINT = "https://kontaktinfo-ws-yt2.difi.eon.no/authlevel/rest/v1/sikkerhetsnivaa";
+    private static final String AUDIENCE = "https://oidc-ver2.difi.no/idporten-oidc-provider/";
+    private static final String TOKEN_ENDPOINT = "https://oidc-ver2.difi.no/idporten-oidc-provider/token";
+    private static final String API_ENDPOINT = "https://kontaktinfo-ws-ver2.difi.no/authlevel/rest/v1/sikkerhetsnivaa";
     private static final String SCOPE = "global/idporten.authlevel.read";
 
 
@@ -46,7 +46,10 @@ public class AuthlevelApiTest {
 
         String assertion = makeJwt();
         TokenResponse tokenResponse = makeTokenRequest(assertion);
-        ApiResponse apiResponse = makeApiRequest("08023549930", tokenResponse.getAccessToken());
+        
+		
+		System.out.println("Making request to "+API_ENDPOINT);
+		ApiResponse apiResponse = makeApiRequest("08023549930", tokenResponse.getAccessToken());
 
         System.out.println("Got response from authlevel api:");
         System.out.println(new GsonBuilder().setPrettyPrinting().create().toJson(apiResponse));
